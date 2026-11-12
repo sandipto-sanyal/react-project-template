@@ -7,7 +7,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <nav className="p-4 bg-[#eee]">
-        <Link to="/" className="mr-4 text-3xl font-bold underline text-primary">Home</Link>
+        <Link to="/" className="mr-4 text-3xl font-bold underline text-brand-primary">Home</Link>
         <Link to="/about" className="mr-4">About</Link>
         <Link to="/dashboard">Dashboard</Link>
       </nav>
