@@ -94,12 +94,12 @@ try {
 ### POST
 #### Raw JSON
 ```typescript
-import { http } from "@/lib/http";
+import  api  from "@/src/lib/http/client"
 
 interface CreateUserPayload { name: string; email: string; roles: string[]; }
 interface User { id: string; name: string; email: string; roles: string[]; }
 
-const user = await http.post<User, CreateUserPayload>("/users", {
+const user = await api.post<User, CreateUserPayload>("/users", {
   name: "Ada",
   email: "ada@example.com",
   roles: ["admin"],
@@ -112,6 +112,6 @@ form.append("userId", "42");
 form.append("avatar", file);          // File from <input type="file">
 form.append("caption", "Profile photo");
 
-const result = await http.post<{ id: string; url: string }, FormData>("/users/avatar", form);
+const result = await api.post<{ id: string; url: string }, FormData>("/users/avatar", form);
 ```
 
